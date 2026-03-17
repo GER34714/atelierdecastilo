@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier de Castillo | Taller de Tufting en Palermo Hollywood</title>
+  <meta name="description" content="Atelier de Castillo es un taller de tufting en Palermo Hollywood, CABA. Un espacio creativo para explorar color, textura y diseño a traves de piezas unicas y experiencias textiles." />
+  <meta name="keywords" content="tufting, taller de tufting, atelier de castillo, alfombras, palermo hollywood, caba, arte textil, talleres creativos" />
+  <meta name="author" content="Ciborg 347" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atelier de Castillo | Taller de Tufting en Palermo Hollywood" />
+  <meta property="og:description" content="Un espacio creativo para descubrir el tufting, crear piezas unicas y vivir una experiencia distinta en Palermo Hollywood." />
+  <meta property="og:image" content="https://iili.io/qXFjeGn.jpg" />
+  <meta property="og:url" content="https://atelierdecastillo.com" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Atelier de Castillo | Taller de Tufting en Palermo Hollywood" />
+  <meta name="twitter:description" content="Taller de tufting, proceso creativo, piezas textiles y experiencias en Palermo Hollywood." />
+  <meta name="twitter:image" content="https://iili.io/qXFjeGn.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#f6efe8;
+      --bg-soft:#fbf6f1;
+      --panel:rgba(255,255,255,.76);
+      --panel-strong:rgba(255,255,255,.92);
+      --text:#261d18;
+      --muted:#6f5b50;
+      --line:rgba(90,58,38,.14);
+      --accent:#a24430;
+      --accent-2:#7b281d;
+      --shadow:0 18px 55px rgba(78,45,26,.12);
+      --radius:26px;
+      --max:1220px;
+      --header-bg:rgba(246,239,232,.82);
+    }
+
+    body.dark{
+      --bg:#161110;
+      --bg-soft:#1d1615;
+      --panel:rgba(31,23,21,.76);
+      --panel-strong:rgba(31,23,21,.92);
+      --text:#f5ede4;
+      --muted:#c6b2a6;
+      --line:rgba(255,255,255,.10);
+      --accent:#dc7d63;
+      --accent-2:#f0a083;
+      --shadow:0 18px 55px rgba(0,0,0,.28);
+      --header-bg:rgba(22,17,16,.82);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(162,68,48,.10), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(123,40,29,.08), transparent 24%),
+        var(--bg);
+      color:var(--text);
+      overflow-x:hidden;
+      transition:background .3s ease,color .3s ease;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+
+    .container{
+      width:min(calc(100% - 32px), var(--max));
+      margin:0 auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(16px);
+      background:var(--header-bg);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand-logo{
+      width:54px;
+      height:54px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid rgba(255,255,255,.7);
+      box-shadow:var(--shadow);
+      background:#fff;
+      flex:0 0 auto;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:1rem;
+      line-height:1.1;
+      letter-spacing:.01em;
+    }
+
+    .brand-text span{
+      display:block;
+      color:var(--muted);
+      font-size:.88rem;
+      margin-top:4px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .toggle-btn,
+    .ghost-btn,
+    .primary-btn{
+      border:none;
+      border-radius:999px;
+      height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:0 18px;
+      cursor:pointer;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .toggle-btn{
+      width:46px;
+      padding:0;
+      background:var(--panel);
+      color:var(--text);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+    }
+
+    .ghost-btn{
+      background:transparent;
+      color:var(--text);
+      border:1px solid var(--line);
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 14px 30px rgba(123,40,29,.24);
+    }
+
+    .toggle-btn:hover,
+    .ghost-btn:hover,
+    .primary-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .mobile-menu-btn{
+      display:none;
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      box-shadow:var(--shadow);
+      cursor:pointer;
+      flex:0 0 auto;
+    }
+
+    .mobile-drawer{
+      display:none;
+    }
+
+    section{
+      padding:34px 0;
+    }
+
+    .hero{
+      padding:22px 0 18px;
+    }
+
+    .hero-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#111;
+      aspect-ratio:16/8.3;
+      min-height:300px;
+    }
+
+    .hero-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .intro-panel{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      backdrop-filter:blur(12px);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-family:"Cormorant Garamond", serif;
+      font-size:clamp(2.1rem, 4vw, 3.35rem);
+      line-height:1;
+      letter-spacing:-.03em;
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:720px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:1rem;
+    }
+
+    .intro-copy{
+      padding:30px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 13px;
+      border-radius:999px;
+      background:rgba(162,68,48,.10);
+      color:var(--accent);
+      border:1px solid rgba(162,68,48,.12);
+      font-size:.84rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+      font-weight:700;
+    }
+
+    .intro-copy h1{
+      margin:0;
+      font-family:"Cormorant Garamond", serif;
+      font-size:clamp(2.7rem, 6vw, 5rem);
+      line-height:.94;
+      letter-spacing:-.04em;
+    }
+
+    .intro-copy p{
+      margin:16px 0 0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:1rem;
+    }
+
+    .intro-actions{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .info-stack{
+      display:grid;
+      gap:14px;
+    }
+
+    .info-card{
+      padding:22px;
+    }
+
+    .info-card strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    .info-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.97rem;
+    }
+
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:16px;
+    }
+
+    .value-card{
+      padding:22px;
+    }
+
+    .value-card strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:1rem;
+    }
+
+    .value-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.96rem;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .services-image{
+      overflow:hidden;
+      min-height:540px;
+    }
+
+    .services-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .services-content{
+      padding:28px;
+    }
+
+    .service-list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .service-item{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:14px;
+      align-items:start;
+      padding:18px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:var(--panel-strong);
+    }
+
+    .service-number{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+      font-weight:800;
+      box-shadow:0 10px 24px rgba(123,40,29,.2);
+    }
+
+    .service-item strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1.02rem;
+    }
+
+    .service-item p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.97rem;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:22px;
+    }
+
+    .about-box,
+    .faq-box,
+    .review-card,
+    .step-card,
+    .cta-card{
+      padding:28px;
+    }
+
+    .about-box p,
+    .faq-box p,
+    .review-card p,
+    .step-card p,
+    .cta-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:.98rem;
+    }
+
+    .steps-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:16px;
+    }
+
+    .step-card strong{
+      display:block;
+      font-size:1rem;
+      margin:14px 0 8px;
+    }
+
+    .step-num{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+      font-weight:800;
+      box-shadow:0 10px 24px rgba(123,40,29,.2);
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+
+    .gallery-item{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      background:var(--panel);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      aspect-ratio:4/4.4;
+      cursor:pointer;
+      transform:translateY(16px);
+      opacity:0;
+      animation:fadeUp .55s ease forwards;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      transition:transform .35s ease;
+    }
+
+    .gallery-item::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.18), transparent 40%);
+      opacity:0;
+      transition:opacity .3s ease;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.04);
+    }
+
+    .gallery-item:hover::after{
+      opacity:1;
+    }
+
+    .gallery-actions{
+      margin-top:24px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .gallery-btn{
+      min-width:220px;
+    }
+
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:16px;
+    }
+
+    .review-card{
+      background:
+        radial-gradient(circle at top right, rgba(162,68,48,.10), transparent 35%),
+        var(--panel);
+    }
+
+    .stars{
+      font-size:1rem;
+      color:var(--accent);
+      letter-spacing:.12em;
+      margin-bottom:14px;
+    }
+
+    .review-author{
+      margin-top:16px;
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .review-author strong{
+      font-size:1rem;
+    }
+
+    .review-author span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .faq-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .faq-item{
+      padding:18px 20px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:var(--panel-strong);
+    }
+
+    .faq-item strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:1rem;
+    }
+
+    .cta-wrap{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:center;
+      padding:30px;
+      background:
+        radial-gradient(circle at top right, rgba(162,68,48,.18), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(123,40,29,.14), transparent 34%),
+        var(--panel);
+    }
+
+    .cta-wrap h3{
+      margin:0 0 12px;
+      font-family:"Cormorant Garamond", serif;
+      font-size:clamp(2rem, 4vw, 3rem);
+      line-height:1;
+      letter-spacing:-.03em;
+    }
+
+    .cta-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:flex-end;
+    }
+
+    .footer{
+      padding:26px 0 36px;
+      position:relative;
+    }
+
+    .footer-inner{
+      border-top:1px solid var(--line);
+      padding-top:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer-brand{
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.86);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      z-index:999;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .25s ease;
+    }
+
+    .lightbox.active{
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    .lightbox-inner{
+      position:relative;
+      width:min(92vw, 900px);
+      max-height:90vh;
+      border-radius:24px;
+      overflow:hidden;
+      background:#111;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 24px 70px rgba(0,0,0,.35);
+    }
+
+    .lightbox img{
+      width:100%;
+      height:100%;
+      max-height:90vh;
+      object-fit:contain;
+      background:#111;
+    }
+
+    .lightbox-close{
+      position:absolute;
+      top:14px;
+      right:14px;
+      width:44px;
+      height:44px;
+      border:none;
+      border-radius:50%;
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      font-size:1.3rem;
+      cursor:pointer;
+      backdrop-filter:blur(10px);
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(16px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @media (max-width: 1080px){
+      .intro-panel,
+      .services-grid,
+      .about-grid,
+      .cta-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .values-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .steps-grid,
+      .reviews-grid{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .cta-buttons{
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav-links{
+        display:none;
+      }
+
+      .mobile-menu-btn{
+        display:grid;
+        place-items:center;
+      }
+
+      .mobile-drawer{
+        display:block;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .3s ease;
+      }
+
+      .mobile-drawer.open{
+        max-height:320px;
+      }
+
+      .mobile-drawer-inner{
+        display:grid;
+        gap:10px;
+        padding:0 0 16px;
+      }
+
+      .mobile-drawer-inner .primary-btn,
+      .mobile-drawer-inner .ghost-btn{
+        width:100%;
+      }
+
+      .hero-card{
+        aspect-ratio:16/11.5;
+      }
+
+      .intro-copy,
+      .services-content,
+      .about-box,
+      .faq-box,
+      .review-card,
+      .step-card,
+      .cta-wrap,
+      .value-card{
+        padding:22px;
+      }
+
+      .values-grid{
+        grid-template-columns:1fr;
+      }
+
+      .services-image{
+        min-height:360px;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-inner{
+        align-items:flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="nav">
+        <a href="#inicio" class="brand">
+          <img class="brand-logo" src="https://iili.io/qXFW4TP.jpg" alt="Logo Atelier de Castillo" />
+          <div class="brand-text">
+            <strong>Atelier de Castillo</strong>
+            <span>Taller de tufting · Palermo Hollywood</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
+          <a class="ghost-btn" href="#galeria">Galeria</a>
+          <a class="ghost-btn" href="#reseñas">Reseñas</a>
+          <button class="toggle-btn" id="themeToggle" aria-label="Cambiar tema">◐</button>
+          <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-inner">
+          <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
+          <a class="ghost-btn" href="#galeria">Galeria</a>
+          <a class="ghost-btn" href="#reseñas">Reseñas</a>
+          <button class="toggle-btn" id="themeToggleMobile" aria-label="Cambiar tema">◐</button>
+          <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-card">
+          <img src="https://iili.io/qXFjeGn.jpg" alt="Imagen principal Atelier de Castillo" />
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <div class="intro-panel">
+          <div class="panel intro-copy">
+            <span class="eyebrow">Atelier de Castillo</span>
+            <h1>Textura, color y una manera unica de crear.</h1>
+            <p>
+              Atelier de Castillo es un espacio creativo donde el tufting se convierte en experiencia, exploracion y expresion. La propuesta gira en torno al hacer con las manos, al juego con las formas y al valor de construir una pieza con identidad propia.
+            </p>
+            <p>
+              Cada encuentro abre la puerta a un universo visual donde diseño, textura y color se cruzan para dar vida a alfombras y composiciones textiles que no se sienten repetidas, sino personales, vivas y con presencia.
+            </p>
+            <div class="intro-actions">
+              <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+              <a class="ghost-btn" href="#quienes-somos">Conocer mas</a>
+            </div>
+          </div>
+
+          <div class="info-stack">
+            <div class="panel info-card">
+              <strong>Ubicacion</strong>
+              <p>Palermo Hollywood, CABA. Un entorno creativo para descubrir el tufting desde cerca y vivir el proceso completo.</p>
+            </div>
+            <div class="panel info-card">
+              <strong>Propuesta</strong>
+              <p>Un taller pensado para quienes valoran el arte textil, el trabajo manual, la composicion y la experiencia de crear algo unico.</p>
+            </div>
+            <div class="panel info-card">
+              <strong>Identidad</strong>
+              <p>Una marca con mirada artistica, sensibilidad visual y una estetica donde cada pieza transmite caracter y dedicacion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Lo que hace especial a la marca</h2>
+          </div>
+          <p>
+            Atelier de Castillo no se queda solo en el resultado final. Lo que suma valor es la experiencia completa: imaginar, elegir, crear y ver como una idea se transforma en algo real.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="panel value-card">
+            <strong>Proceso creativo</strong>
+            <p>La experiencia esta pensada para disfrutar cada etapa, desde la idea inicial hasta la construccion de la pieza.</p>
+          </div>
+          <div class="panel value-card">
+            <strong>Texturas con identidad</strong>
+            <p>Cada trabajo tiene fuerza visual gracias a la combinacion de formas, materiales y colores con personalidad propia.</p>
+          </div>
+          <div class="panel value-card">
+            <strong>Mirada artistica</strong>
+            <p>La marca transmite sensibilidad visual, criterio estetico y una forma de trabajo donde lo artesanal y lo contemporaneo conviven.</p>
+          </div>
+          <div class="panel value-card">
+            <strong>Experiencia real</strong>
+            <p>No es solo observar el resultado. Es vivir de cerca el hacer, conectar con el proceso y construir algo unico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Una experiencia que va mas alla del taller</h2>
+          </div>
+          <p>
+            El universo de Atelier de Castillo combina oficio, exploracion visual y una manera cercana de vivir el tufting desde adentro.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="panel services-image">
+            <img src="https://iili.io/qXFOp9f.jpg" alt="Servicios Atelier de Castillo" />
+          </div>
+
+          <div class="panel services-content">
+            <div class="service-list">
+              <div class="service-item">
+                <div class="service-number">01</div>
+                <div>
+                  <strong>Explorar formas y color</strong>
+                  <p>El tufting aparece como una herramienta para experimentar visualmente y construir piezas con composicion, ritmo y presencia.</p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-number">02</div>
+                <div>
+                  <strong>Conectar con lo manual</strong>
+                  <p>La experiencia recupera el valor del hacer con las manos, del tiempo dedicado y del detalle que vuelve unica a cada pieza.</p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-number">03</div>
+                <div>
+                  <strong>Crear piezas con caracter</strong>
+                  <p>El resultado no es una alfombra cualquiera, sino una composicion con identidad, textura y una energia propia.</p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-number">04</div>
+                <div>
+                  <strong>Vivir el proceso completo</strong>
+                  <p>La propuesta pone en valor todo el recorrido: imaginar, construir, ajustar y ver como la idea se vuelve una pieza real.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="quienes-somos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Quienes somos</h2>
+          </div>
+          <p>
+            Una marca que entiende el tufting como lenguaje visual, como experiencia sensible y como una forma de crear piezas que hablan por si solas.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="panel about-box">
+            <p>
+              Atelier de Castillo nace desde una mirada donde el diseño, la textura y el trabajo manual se encuentran para construir algo mas que un objeto decorativo. La marca propone un espacio donde el proceso creativo tiene protagonismo y donde cada pieza se desarrolla con atencion, criterio visual y dedicacion.
+            </p>
+            <p style="margin-top:16px;">
+              La identidad del atelier esta atravesada por el arte textil, el detalle y la busqueda de composiciones que se sientan vivas. Por eso cada experiencia y cada trabajo reflejan una mezcla entre exploracion, tecnica y expresion personal.
+            </p>
+          </div>
+
+          <div class="panel about-box">
+            <p>
+              El valor esta en la forma de hacer: en la eleccion de los colores, en el peso de las texturas, en la paciencia del proceso y en el caracter final de la pieza. Atelier de Castillo no busca repetir formulas, sino sostener una propuesta autentica donde lo visual y lo artesanal van de la mano.
+            </p>
+            <p style="margin-top:16px;">
+              Esa combinacion entre sensibilidad artistica y trabajo real es lo que convierte al atelier en un espacio que inspira, invita a crear y deja una huella distinta en cada trabajo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Como se vive la experiencia</h2>
+          </div>
+          <p>
+            Una forma clara y simple de entender el recorrido creativo dentro de Atelier de Castillo.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="panel step-card">
+            <div class="step-num">1</div>
+            <strong>Inspiracion</strong>
+            <p>Todo empieza con una idea, una forma, una paleta o una imagen que despierta ganas de crear algo propio.</p>
+          </div>
+          <div class="panel step-card">
+            <div class="step-num">2</div>
+            <strong>Proceso</strong>
+            <p>El trabajo toma forma a traves del tufting, la textura y la composicion, en una experiencia manual y expresiva.</p>
+          </div>
+          <div class="panel step-card">
+            <div class="step-num">3</div>
+            <strong>Resultado</strong>
+            <p>La pieza final conserva el recorrido vivido: color, gesto, caracter y una identidad que no se siente generica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Galeria</h2>
+          </div>
+          <p>
+            Piezas, escenas del proceso y distintos momentos que muestran el universo visual de Atelier de Castillo.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <div class="gallery-actions">
+          <button class="primary-btn gallery-btn" id="galleryBtn">Ver mas</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reseñas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Reseñas</h2>
+          </div>
+          <p>
+            Una experiencia que se disfruta por el proceso, por el ambiente y por el valor de crear algo con impronta propia.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="panel review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Me encanto la propuesta. No es solo ver algo lindo terminado, sino vivir todo el proceso y conectar con una experiencia super creativa.
+            </p>
+            <div class="review-author">
+              <strong>Lucia M.</strong>
+              <span>Experiencia en taller</span>
+            </div>
+          </div>
+
+          <div class="panel review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              El espacio transmite muchisimo. Hay una identidad muy marcada en cada detalle y se nota el amor por lo que hacen.
+            </p>
+            <div class="review-author">
+              <strong>Valentina R.</strong>
+              <span>Visita al atelier</span>
+            </div>
+          </div>
+
+          <div class="panel review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              Me gusto mucho la combinacion entre arte, textura y proceso. Se siente autentico, cuidado y con una energia muy linda.
+            </p>
+            <div class="review-author">
+              <strong>Martin P.</strong>
+              <span>Seguimiento de la marca</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Preguntas frecuentes</h2>
+          </div>
+          <p>
+            Una seccion que suma claridad, orden y confianza para quienes quieren conocer mejor la propuesta.
+          </p>
+        </div>
+
+        <div class="panel faq-box">
+          <div class="faq-list">
+            <div class="faq-item">
+              <strong>Que tipo de experiencia propone Atelier de Castillo?</strong>
+              <p>Una experiencia creativa ligada al tufting, al arte textil y a la construccion de piezas con identidad propia.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Donde esta ubicado?</strong>
+              <p>En Palermo Hollywood, CABA, dentro de un entorno pensado para vivir el proceso de forma cercana y visual.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Que transmite la marca?</strong>
+              <p>Diseño, textura, sensibilidad artistica y una forma de trabajar donde lo manual y lo estetico tienen el mismo peso.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Por que suma esta propuesta?</strong>
+              <p>Porque no se trata solo del resultado final, sino del recorrido creativo y de la experiencia completa que lo hace especial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="panel cta-wrap">
+          <div class="cta-copy">
+            <h3>Descubri mas del universo Atelier de Castillo</h3>
+            <p>
+              Si queres seguir viendo piezas, proceso, identidad visual y todo lo que rodea al taller, podes entrar a su Instagram y conocer mas de cerca la marca.
+            </p>
+          </div>
+          <div class="cta-buttons">
+            <a class="ghost-btn" href="#inicio">Volver arriba</a>
+            <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>Atelier de Castillo · Taller de Tufting · Palermo Hollywood, CABA</span>
+        <span>Creado y diseñado por <a class="footer-brand" href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Ciborg 347</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">✕</button>
+      <img id="lightboxImage" src="" alt="Imagen ampliada de la galeria" />
+    </div>
+  </div>
+
+  <script>
+    const galleryImages = [
+      "https://iili.io/qXFPfLJ.jpg",
+      "https://iili.io/qXFPHdB.jpg",
+      "https://iili.io/qXFP2mF.jpg",
+      "https://iili.io/qXFPKXa.jpg",
+      "https://iili.io/qXFPxdN.jpg",
+      "https://iili.io/qXFP5LG.jpg",
+      "https://iili.io/qXFPa14.jpg",
+      "https://iili.io/qXFPGp9.jpg",
+      "https://iili.io/qXFPWhu.jpg",
+      "https://iili.io/qXFPwEx.jpg",
+      "https://iili.io/qXFPNrQ.jpg"
+    ];
+
+    const galleryGrid = document.getElementById("galleryGrid");
+    const galleryBtn = document.getElementById("galleryBtn");
+    const batchSize = 3;
+    let visibleCount = 0;
+
+    function renderGalleryBatch() {
+      const nextItems = galleryImages.slice(visibleCount, visibleCount + batchSize);
+
+      nextItems.forEach((src, index) => {
+        const item = document.createElement("button");
+        item.className = "gallery-item";
+        item.style.animationDelay = `${index * 0.08}s`;
+        item.type = "button";
+        item.setAttribute("aria-label", "Abrir imagen de la galeria");
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "Trabajo de Atelier de Castillo";
+
+        item.appendChild(img);
+        galleryGrid.appendChild(item);
+
+        item.addEventListener("click", () => openLightbox(src));
+      });
+
+      visibleCount += nextItems.length;
+
+      if (visibleCount >= galleryImages.length) {
+        galleryBtn.textContent = "Ver mas en Instagram";
+        galleryBtn.onclick = () => {
+          window.open("https://www.instagram.com/atelierdecastillo/", "_blank", "noopener,noreferrer");
+        };
+      } else {
+        galleryBtn.textContent = "Ver mas";
+        galleryBtn.onclick = renderGalleryBatch;
+      }
+    }
+
+    renderGalleryBatch();
+
+    const body = document.body;
+    const themeToggle = document.getElementById("themeToggle");
+    const themeToggleMobile = document.getElementById("themeToggleMobile");
+
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem("atelier-theme");
+      if (savedTheme === "dark") body.classList.add("dark");
+    }
+
+    function toggleTheme() {
+      body.classList.toggle("dark");
+      localStorage.setItem("atelier-theme", body.classList.contains("dark") ? "dark" : "light");
+    }
+
+    if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
+    applySavedTheme();
+
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileDrawer = document.getElementById("mobileDrawer");
+
+    if (mobileMenuBtn && mobileDrawer) {
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileDrawer.classList.toggle("open");
+      });
+    }
+
+    document.querySelectorAll(".mobile-drawer a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileDrawer.classList.remove("open");
+      });
+    });
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function openLightbox(src) {
+      lightboxImage.src = src;
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
+</body>
+</html>
