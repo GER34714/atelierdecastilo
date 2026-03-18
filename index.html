@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atelier de Castillo | Taller de Tufting en Palermo Hollywood</title>
-  <meta name="description" content="Atelier de Castillo es un espacio creativo de tufting en Palermo Hollywood, CABA. Textura, color, piezas con identidad y una experiencia artistica para descubrir el valor de crear con las manos." />
+  <meta name="description" content="Atelier de Castillo es un espacio creativo de tufting en Palermo Hollywood, CABA. Textura, color, piezas con identidad y una experiencia artística para descubrir el valor de crear con las manos." />
   <meta name="keywords" content="tufting, atelier de castillo, alfombras, taller de tufting, palermo hollywood, caba, arte textil, experiencia creativa" />
   <meta name="author" content="Ciborg 347" />
 
@@ -16,7 +16,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Atelier de Castillo | Taller de Tufting en Palermo Hollywood" />
-  <meta name="twitter:description" content="Textura, color, proceso creativo y piezas unicas en un taller con identidad propia." />
+  <meta name="twitter:description" content="Textura, color, proceso creativo y piezas únicas en un taller con identidad propia." />
   <meta name="twitter:image" content="https://iili.io/qXFjeGn.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,34 +24,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
+    @font-face{
+      font-family:"Modernline";
+      src:url("modernline.otf") format("opentype");
+      font-display:swap;
+    }
+
     :root{
       --bg:#f7f0e8;
-      --bg-soft:rgba(255,255,255,.72);
-      --panel:rgba(255,255,255,.80);
-      --panel-strong:rgba(255,255,255,.92);
-      --text:#221914;
-      --muted:#4f4038;
+      --bg-soft:rgba(255,255,255,.74);
+      --panel:rgba(255,255,255,.82);
+      --panel-strong:rgba(255,255,255,.93);
+      --text:#231913;
+      --muted:#4f4138;
       --line:rgba(88,57,38,.16);
       --accent:#a44a37;
       --accent-2:#7d2a1d;
       --shadow:0 18px 55px rgba(68,40,24,.12);
       --radius:26px;
       --max:1220px;
-      --header-bg:rgba(247,240,232,.86);
+      --header-bg:rgba(247,240,232,.88);
     }
 
     body.dark{
-      --bg:#161110;
-      --bg-soft:rgba(26,20,19,.78);
-      --panel:rgba(26,20,19,.80);
-      --panel-strong:rgba(26,20,19,.90);
-      --text:#f6eee6;
-      --muted:#dfcec3;
+      --bg:#15100f;
+      --bg-soft:rgba(23,18,17,.82);
+      --panel:rgba(26,20,19,.84);
+      --panel-strong:rgba(31,24,23,.92);
+      --text:#fff5ee;
+      --muted:#ead8cc;
       --line:rgba(255,255,255,.10);
       --accent:#de8368;
       --accent-2:#f0a587;
-      --shadow:0 18px 55px rgba(0,0,0,.28);
-      --header-bg:rgba(22,17,16,.84);
+      --shadow:0 18px 55px rgba(0,0,0,.30);
+      --header-bg:rgba(18,14,13,.88);
     }
 
     *{box-sizing:border-box}
@@ -128,6 +134,26 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+    }
+
+    .brand-script{
+      font-family:"Modernline","Cormorant Garamond",serif;
+      font-weight:400;
+      letter-spacing:.01em;
+      display:inline-block;
+      background:linear-gradient(90deg,#a44a37 0%, #d67a62 28%, #d8af6c 52%, #cb6f83 76%, #8f4dc2 100%);
+      background-size:200% 100%;
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      animation:brandPulse 6s ease-in-out infinite;
+      filter:drop-shadow(0 0 8px rgba(214,122,98,.18));
+    }
+
+    body.dark .brand-script{
+      background:linear-gradient(90deg,#ffb09a 0%, #ffd1b5 28%, #ffe09d 52%, #ffb1c8 76%, #d3b1ff 100%);
+      background-size:200% 100%;
+      filter:drop-shadow(0 0 10px rgba(255,190,170,.22));
     }
 
     .nav-links{
@@ -709,9 +735,35 @@
       backdrop-filter:blur(10px);
     }
 
+    body.dark .section-head h2,
+    body.dark .section-head p,
+    body.dark .brand-text span,
+    body.dark .footer-inner,
+    body.dark .footer-inner span{
+      color:#f7e8dd;
+      text-shadow:0 2px 12px rgba(0,0,0,.34);
+    }
+
+    body.dark .ghost-btn{
+      background:rgba(255,255,255,.08);
+      color:#fff4ed;
+      border-color:rgba(255,255,255,.12);
+    }
+
+    body.dark .mobile-menu-btn,
+    body.dark .toggle-btn{
+      color:#fff4ed;
+    }
+
     @keyframes fadeUp{
       from{opacity:0;transform:translateY(16px)}
       to{opacity:1;transform:translateY(0)}
+    }
+
+    @keyframes brandPulse{
+      0%{background-position:0% 50%; transform:translateY(0)}
+      50%{background-position:100% 50%; transform:translateY(-1px)}
+      100%{background-position:0% 50%; transform:translateY(0)}
     }
 
     @media (max-width: 1080px){
@@ -827,26 +879,26 @@
         <a href="#inicio" class="brand">
           <img class="brand-logo" src="https://iili.io/qXFW4TP.jpg" alt="Logo Atelier de Castillo" />
           <div class="brand-text">
-            <strong>Atelier de Castillo</strong>
+            <strong><span class="brand-script">Atelier de Castillo</span></strong>
             <span>Taller de tufting · Palermo Hollywood</span>
           </div>
         </a>
 
         <div class="nav-links">
           <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
-          <a class="ghost-btn" href="#galeria">Galeria</a>
+          <a class="ghost-btn" href="#galeria">Galería</a>
           <a class="ghost-btn" href="#reseñas">Reseñas</a>
           <button class="toggle-btn" id="themeToggle" aria-label="Cambiar tema">◐</button>
           <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">☰</button>
       </div>
 
       <div class="mobile-drawer" id="mobileDrawer">
         <div class="mobile-drawer-inner">
           <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
-          <a class="ghost-btn" href="#galeria">Galeria</a>
+          <a class="ghost-btn" href="#galeria">Galería</a>
           <a class="ghost-btn" href="#reseñas">Reseñas</a>
           <button class="toggle-btn" id="themeToggleMobile" aria-label="Cambiar tema">◐</button>
           <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -860,17 +912,17 @@
       <div class="container">
         <div class="hero-layout">
           <div class="hero-copy">
-            <span class="eyebrow">Atelier de Castillo</span>
+            <span class="eyebrow"><span class="brand-script">Atelier de Castillo</span></span>
             <h1>Una marca donde la textura y el color construyen identidad.</h1>
             <p>
-              Atelier de Castillo propone una mirada sensible y creativa sobre el tufting. No se trata solo de una pieza terminada, sino de todo lo que pasa en el recorrido: la idea, la eleccion de formas, el juego con los colores y la transformacion de una imagen en algo real, con presencia propia.
+              Atelier de Castillo propone una mirada sensible y creativa sobre el tufting. No se trata solo de una pieza terminada, sino de todo lo que pasa en el recorrido: la idea, la elección de formas, el juego con los colores y la transformación de una imagen en algo real, con presencia propia.
             </p>
             <p>
-              El atelier transmite una estetica calida, artistica y actual, donde cada trabajo conserva ese equilibrio entre oficio, experimentacion y personalidad. Un espacio pensado para quienes valoran el proceso tanto como el resultado.
+              El atelier transmite una estética cálida, artística y actual, donde cada trabajo conserva ese equilibrio entre oficio, experimentación y personalidad. Un espacio pensado para quienes valoran el proceso tanto como el resultado.
             </p>
             <div class="hero-actions">
               <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
-              <a class="ghost-btn" href="#galeria">Explorar galeria</a>
+              <a class="ghost-btn" href="#galeria">Explorar galería</a>
             </div>
           </div>
 
@@ -890,28 +942,28 @@
             <h2>Una propuesta con lenguaje propio</h2>
           </div>
           <p>
-            El universo visual de Atelier de Castillo se apoya en la materia, en el detalle y en una manera de crear que se siente viva. Todo gira en torno a piezas con caracter, textura y una identidad clara.
+            El universo visual de Atelier de Castillo se apoya en la materia, en el detalle y en una manera de crear que se siente viva. Todo gira en torno a piezas con carácter, textura y una identidad clara.
           </p>
         </div>
 
         <div class="intro-grid">
           <div class="panel intro-copy">
             <p>
-              La marca se construye desde una combinacion muy marcada entre arte textil, sensibilidad visual y trabajo manual. Eso hace que cada pieza no se sienta decorativa sin mas, sino parte de una busqueda estetica real, cuidada y personal.
+              La marca se construye desde una combinación muy marcada entre arte textil, sensibilidad visual y trabajo manual. Eso hace que cada pieza no se sienta decorativa sin más, sino parte de una búsqueda estética real, cuidada y personal.
             </p>
             <p style="margin-top:16px;">
-              En Atelier de Castillo el tufting aparece como herramienta de expresion. La forma, el ritmo, la textura y el color no estan puestos al azar, sino pensados para dar vida a composiciones que transmiten energia, dedicacion y estilo.
+              En Atelier de Castillo el tufting aparece como herramienta de expresión. La forma, el ritmo, la textura y el color no están puestos al azar, sino pensados para dar vida a composiciones que transmiten energía, dedicación y estilo.
             </p>
           </div>
 
           <div class="info-stack">
             <div class="panel info-card">
-              <strong>Ubicacion</strong>
+              <strong>Ubicación</strong>
               <p>Palermo Hollywood, CABA. Un entorno creativo donde el proceso y la identidad visual tienen protagonismo.</p>
             </div>
             <div class="panel info-card">
               <strong>Esencia</strong>
-              <p>Una marca artistica, calida y contemporanea, donde el tufting se vive como experiencia y lenguaje visual.</p>
+              <p>Una marca artística, cálida y contemporánea, donde el tufting se vive como experiencia y lenguaje visual.</p>
             </div>
             <div class="panel info-card">
               <strong>Resultado</strong>
@@ -929,7 +981,7 @@
             <h2>Lo que sucede dentro del atelier</h2>
           </div>
           <p>
-            Un espacio donde la tecnica se cruza con la creatividad y cada etapa del proceso suma valor a la experiencia completa.
+            Un espacio donde la técnica se cruza con la creatividad y cada etapa del proceso suma valor a la experiencia completa.
           </p>
         </div>
 
@@ -944,7 +996,7 @@
                 <div class="service-number">01</div>
                 <div>
                   <strong>Proceso creativo real</strong>
-                  <p>Todo empieza en la idea y se desarrolla a traves de decisiones visuales, tiempo de trabajo y una construccion manual que le da sentido a cada pieza.</p>
+                  <p>Todo empieza en la idea y se desarrolla a través de decisiones visuales, tiempo de trabajo y una construcción manual que le da sentido a cada pieza.</p>
                 </div>
               </div>
 
@@ -952,15 +1004,15 @@
                 <div class="service-number">02</div>
                 <div>
                   <strong>Textura como protagonista</strong>
-                  <p>Las superficies, el relieve y la materia no son un detalle menor: forman parte central del caracter que define cada composicion.</p>
+                  <p>Las superficies, el relieve y la materia no son un detalle menor: forman parte central del carácter que define cada composición.</p>
                 </div>
               </div>
 
               <div class="service-item">
                 <div class="service-number">03</div>
                 <div>
-                  <strong>Color con intencion</strong>
-                  <p>Las combinaciones se piensan para transmitir energia, armonia o contraste, segun la identidad que busca tomar cada trabajo.</p>
+                  <strong>Color con intención</strong>
+                  <p>Las combinaciones se piensan para transmitir energía, armonía o contraste, según la identidad que busca tomar cada trabajo.</p>
                 </div>
               </div>
 
@@ -968,7 +1020,7 @@
                 <div class="service-number">04</div>
                 <div>
                   <strong>Piezas con identidad propia</strong>
-                  <p>El valor no esta en repetir formulas, sino en sostener una propuesta autentica donde cada pieza se sienta unica y viva.</p>
+                  <p>El valor no está en repetir fórmulas, sino en sostener una propuesta auténtica donde cada pieza se sienta única y viva.</p>
                 </div>
               </div>
             </div>
@@ -981,7 +1033,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Quienes somos</h2>
+            <h2>Quiénes somos</h2>
           </div>
           <p>
             Una marca que entiende el tufting como una forma de crear, comunicar y construir piezas que dejen huella visual.
@@ -990,10 +1042,10 @@
 
         <div class="panel about-box">
           <p>
-            Atelier de Castillo nace desde una mirada donde el arte textil, la composicion y el trabajo manual conviven de forma natural. La propuesta no gira solamente alrededor del objeto final, sino del valor que tiene imaginarlo, construirlo y verlo tomar forma con tiempo, criterio y dedicacion.
+            Atelier de Castillo nace desde una mirada donde el arte textil, la composición y el trabajo manual conviven de forma natural. La propuesta no gira solamente alrededor del objeto final, sino del valor que tiene imaginarlo, construirlo y verlo tomar forma con tiempo, criterio y dedicación.
           </p>
           <p style="margin-top:16px;">
-            La identidad del atelier esta atravesada por la calidez de lo hecho a mano, por una sensibilidad visual fuerte y por el deseo de crear piezas que hablen por si solas. Cada imagen, cada textura y cada trabajo muestran una marca que sabe lo que quiere transmitir y como hacerlo.
+            La identidad del atelier está atravesada por la calidez de lo hecho a mano, por una sensibilidad visual fuerte y por el deseo de crear piezas que hablen por sí solas. Cada imagen, cada textura y cada trabajo muestran una marca que sabe lo que quiere transmitir y cómo hacerlo.
           </p>
         </div>
       </div>
@@ -1003,7 +1055,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Como se vive la experiencia</h2>
+            <h2>Cómo se vive la experiencia</h2>
           </div>
           <p>
             Una manera clara de entender el recorrido creativo que le da sentido a cada pieza.
@@ -1014,17 +1066,17 @@
           <div class="panel step-card">
             <div class="step-num">1</div>
             <strong>Idea</strong>
-            <p>Todo arranca con una imagen, una forma o una combinacion de colores que despierta ganas de crear algo propio.</p>
+            <p>Todo arranca con una imagen, una forma o una combinación de colores que despierta ganas de crear algo propio.</p>
           </div>
           <div class="panel step-card">
             <div class="step-num">2</div>
             <strong>Proceso</strong>
-            <p>El tufting le da cuerpo a esa idea a traves de textura, ritmo visual y un trabajo manual que va construyendo identidad.</p>
+            <p>El tufting le da cuerpo a esa idea a través de textura, ritmo visual y un trabajo manual que va construyendo identidad.</p>
           </div>
           <div class="panel step-card">
             <div class="step-num">3</div>
             <strong>Pieza final</strong>
-            <p>El resultado conserva todo el recorrido: energia, caracter, dedicacion y una presencia que no se siente generica.</p>
+            <p>El resultado conserva todo el recorrido: energía, carácter, dedicación y una presencia que no se siente genérica.</p>
           </div>
         </div>
       </div>
@@ -1034,17 +1086,17 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Galeria</h2>
+            <h2>Galería</h2>
           </div>
           <p>
-            Una seleccion de imagenes que muestra no solo el resultado, sino tambien el clima visual, la textura y el proceso que hacen reconocible a Atelier de Castillo.
+            Una selección de imágenes que muestra no solo el resultado, sino también el clima visual, la textura y el proceso que hacen reconocible a Atelier de Castillo.
           </p>
         </div>
 
         <div class="gallery-grid" id="galleryGrid"></div>
 
         <div class="gallery-actions">
-          <button class="primary-btn gallery-btn" id="galleryBtn">Ver mas</button>
+          <button class="primary-btn gallery-btn" id="galleryBtn">Ver más</button>
         </div>
       </div>
     </section>
@@ -1064,16 +1116,16 @@
           <div class="panel review-card">
             <div class="review-head">
               <div class="review-avatar">
-                <img src="https://iili.io/qXqkl9e.jpg" alt="Foto de reseña de Sofia" />
+                <img src="https://iili.io/qXqkl9e.jpg" alt="Foto de reseña de Sofía" />
               </div>
               <div class="review-meta">
-                <strong>Sofia M.</strong>
+                <strong>Sofía M.</strong>
                 <span>Seguidora de la marca</span>
               </div>
             </div>
             <div class="stars">★★★★★</div>
             <p>
-              Me encanta la identidad que tiene el atelier. Se nota que cada pieza esta pensada con mucho criterio y que hay una sensibilidad artistica real detras de todo.
+              Me encanta la identidad que tiene el atelier. Se nota que cada pieza está pensada con mucho criterio y que hay una sensibilidad artística real detrás de todo.
             </p>
           </div>
 
@@ -1089,23 +1141,23 @@
             </div>
             <div class="stars">★★★★★</div>
             <p>
-              Es de esas marcas que transmiten mucho apenas ves el trabajo. Todo se siente cuidado, autentico y con una energia muy linda.
+              Es de esas marcas que transmiten mucho apenas ves el trabajo. Todo se siente cuidado, auténtico y con una energía muy linda.
             </p>
           </div>
 
           <div class="panel review-card">
             <div class="review-head">
               <div class="review-avatar">
-                <img src="https://iili.io/qWZ1cts.png" alt="Foto de reseña de Martin" />
+                <img src="https://iili.io/qWZ1cts.png" alt="Foto de reseña de Martín" />
               </div>
               <div class="review-meta">
-                <strong>Martin P.</strong>
+                <strong>Martín P.</strong>
                 <span>Seguimiento del proceso</span>
               </div>
             </div>
             <div class="stars">★★★★★</div>
             <p>
-              Lo que mas me gusto es que no muestra solo piezas lindas, sino todo un universo creativo. Eso le da muchisima personalidad a la marca.
+              Lo que más me gustó es que no muestra solo piezas lindas, sino todo un universo creativo. Eso le da muchísima personalidad a la marca.
             </p>
           </div>
         </div>
@@ -1119,26 +1171,26 @@
             <h2>Preguntas frecuentes</h2>
           </div>
           <p>
-            Una seccion que suma contexto, claridad y confianza para quienes quieren entender mejor la propuesta.
+            Una sección que suma contexto, claridad y confianza para quienes quieren entender mejor la propuesta.
           </p>
         </div>
 
         <div class="panel faq-box">
           <div class="faq-list">
             <div class="faq-item">
-              <strong>Que transmite Atelier de Castillo?</strong>
-              <p>Una mezcla entre arte textil, sensibilidad visual, trabajo manual y una busqueda clara por crear piezas con identidad propia.</p>
+              <strong>¿Qué transmite Atelier de Castillo?</strong>
+              <p>Una mezcla entre arte textil, sensibilidad visual, trabajo manual y una búsqueda clara por crear piezas con identidad propia.</p>
             </div>
             <div class="faq-item">
-              <strong>Donde esta ubicado?</strong>
+              <strong>¿Dónde está ubicado?</strong>
               <p>En Palermo Hollywood, CABA, dentro de un entorno creativo que acompaña la experiencia y el universo de la marca.</p>
             </div>
             <div class="faq-item">
-              <strong>Por que se siente diferente a otras propuestas?</strong>
-              <p>Porque no pone el foco solo en el resultado final, sino tambien en el proceso, en el detalle y en la construccion de una identidad visual fuerte.</p>
+              <strong>¿Por qué se siente diferente a otras propuestas?</strong>
+              <p>Porque no pone el foco solo en el resultado final, sino también en el proceso, en el detalle y en la construcción de una identidad visual fuerte.</p>
             </div>
             <div class="faq-item">
-              <strong>Que valor tiene el proceso creativo en la marca?</strong>
+              <strong>¿Qué valor tiene el proceso creativo en la marca?</strong>
               <p>Es central. La idea, la textura, el color y el tiempo de trabajo forman parte de lo que vuelve especial a cada pieza.</p>
             </div>
           </div>
@@ -1150,9 +1202,9 @@
       <div class="container">
         <div class="panel cta-wrap">
           <div class="cta-copy">
-            <h3>Descubri mas del universo Atelier de Castillo</h3>
+            <h3>Descubrí más del universo Atelier de Castillo</h3>
             <p>
-              Si queres seguir viendo piezas, procesos, texturas y todo lo que construye la identidad del atelier, podes entrar a su Instagram y conocer mas de cerca la marca.
+              Si querés seguir viendo piezas, procesos, texturas y todo lo que construye la identidad del atelier, podés entrar a su Instagram y conocer más de cerca la marca.
             </p>
           </div>
           <div class="cta-buttons">
@@ -1176,7 +1228,7 @@
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-inner">
       <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">✕</button>
-      <img id="lightboxImage" src="" alt="Imagen ampliada de la galeria" />
+      <img id="lightboxImage" src="" alt="Imagen ampliada de la galería" />
     </div>
   </div>
 
@@ -1190,12 +1242,12 @@
       {
         src: "https://iili.io/qXFPHdB.jpg",
         title: "Detalles del proceso",
-        text: "Momentos donde el trabajo manual empieza a darle cuerpo y caracter a cada idea."
+        text: "Momentos donde el trabajo manual empieza a darle cuerpo y carácter a cada idea."
       },
       {
         src: "https://iili.io/qXFP2mF.jpg",
-        title: "Color y composicion",
-        text: "Una busqueda visual que equilibra contraste, armonia y personalidad."
+        title: "Color y composición",
+        text: "Una búsqueda visual que equilibra contraste, armonía y personalidad."
       },
       {
         src: "https://iili.io/qXFPKXa.jpg",
@@ -1204,8 +1256,8 @@
       },
       {
         src: "https://iili.io/qXFPxdN.jpg",
-        title: "Energia del atelier",
-        text: "Imagenes que reflejan el clima creativo y la sensibilidad del espacio."
+        title: "Energía del atelier",
+        text: "Imágenes que reflejan el clima creativo y la sensibilidad del espacio."
       },
       {
         src: "https://iili.io/qXFP5LG.jpg",
@@ -1214,28 +1266,28 @@
       },
       {
         src: "https://iili.io/qXFPa14.jpg",
-        title: "Busquedas visuales",
+        title: "Búsquedas visuales",
         text: "Formas y colores que se combinan para sostener una identidad reconocible."
       },
       {
         src: "https://iili.io/qXFPGp9.jpg",
-        title: "Oficio y expresion",
-        text: "La tecnica aparece al servicio de una experiencia artistica y sensible."
+        title: "Oficio y expresión",
+        text: "La técnica aparece al servicio de una experiencia artística y sensible."
       },
       {
         src: "https://iili.io/qXFPWhu.jpg",
         title: "Proceso vivo",
-        text: "Cada etapa suma valor y deja ver el recorrido que hay detras de la pieza final."
+        text: "Cada etapa suma valor y deja ver el recorrido que hay detrás de la pieza final."
       },
       {
         src: "https://iili.io/qXFPwEx.jpg",
         title: "Texturas que cuentan",
-        text: "La materia no acompaña: habla, define y le da profundidad a cada composicion."
+        text: "La materia no acompaña: habla, define y le da profundidad a cada composición."
       },
       {
         src: "https://iili.io/qXFPNrQ.jpg",
         title: "Identidad del atelier",
-        text: "Una galeria que muestra el universo visual completo, no solo el resultado terminado."
+        text: "Una galería que muestra el universo visual completo, no solo el resultado terminado."
       }
     ];
 
@@ -1255,7 +1307,7 @@
         const imageWrap = document.createElement("button");
         imageWrap.className = "gallery-image";
         imageWrap.type = "button";
-        imageWrap.setAttribute("aria-label", "Abrir imagen de la galeria");
+        imageWrap.setAttribute("aria-label", "Abrir imagen de la galería");
 
         const img = document.createElement("img");
         img.src = item.src;
@@ -1277,12 +1329,12 @@
       visibleCount += nextItems.length;
 
       if (visibleCount >= galleryItems.length) {
-        galleryBtn.textContent = "Ver mas en Instagram";
+        galleryBtn.textContent = "Ver más en Instagram";
         galleryBtn.onclick = () => {
           window.open("https://www.instagram.com/atelierdecastillo/", "_blank", "noopener,noreferrer");
         };
       } else {
-        galleryBtn.textContent = "Ver mas";
+        galleryBtn.textContent = "Ver más";
         galleryBtn.onclick = renderGalleryBatch;
       }
     }
