@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier de Castillo | Taller de Tufting en Palermo Hollywood</title>
-  <meta name="description" content="Atelier de Castillo es un espacio creativo de tufting en Palermo Hollywood, CABA. Textura, color, piezas con identidad y una experiencia artística para descubrir el valor de crear con las manos." />
-  <meta name="keywords" content="tufting, atelier de castillo, alfombras, taller de tufting, palermo hollywood, caba, arte textil, experiencia creativa" />
+  <title>Atelier de Castillo | Taller de Tufting</title>
+  <meta name="description" content="Atelier de Castillo es un espacio creativo de tufting. Textura, color, piezas con identidad y una experiencia artística para descubrir el valor de crear con las manos." />
+  <meta name="keywords" content="tufting, atelier de castillo, alfombras, taller de tufting, arte textil, experiencia creativa" />
   <meta name="author" content="Ciborg 347" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Atelier de Castillo | Taller de Tufting en Palermo Hollywood" />
+  <meta property="og:title" content="Atelier de Castillo | Taller de Tufting" />
   <meta property="og:description" content="Un espacio creativo donde el tufting, la textura y el color se convierten en piezas con identidad propia." />
   <meta property="og:image" content="https://iili.io/qXFjeGn.jpg" />
   <meta property="og:url" content="https://atelierdecastillo.com" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Atelier de Castillo | Taller de Tufting en Palermo Hollywood" />
+  <meta name="twitter:title" content="Atelier de Castillo | Taller de Tufting" />
   <meta name="twitter:description" content="Textura, color, proceso creativo y piezas únicas en un taller con identidad propia." />
   <meta name="twitter:image" content="https://iili.io/qXFjeGn.jpg" />
 
@@ -25,16 +25,16 @@
 
   <style>
     @font-face{
-      font-family:"Modernline";
-      src:url("modernline.otf") format("opentype");
+      font-family:"BabyAletha";
+      src:url("Baby Aletha.otf") format("opentype");
       font-display:swap;
     }
 
     :root{
       --bg:#f7f0e8;
-      --bg-soft:rgba(255,255,255,.74);
-      --panel:rgba(255,255,255,.82);
-      --panel-strong:rgba(255,255,255,.93);
+      --bg-soft:rgba(255,255,255,.76);
+      --panel:rgba(255,255,255,.84);
+      --panel-strong:rgba(255,255,255,.94);
       --text:#231913;
       --muted:#4f4138;
       --line:rgba(88,57,38,.16);
@@ -43,21 +43,7 @@
       --shadow:0 18px 55px rgba(68,40,24,.12);
       --radius:26px;
       --max:1220px;
-      --header-bg:rgba(247,240,232,.88);
-    }
-
-    body.dark{
-      --bg:#15100f;
-      --bg-soft:rgba(23,18,17,.82);
-      --panel:rgba(26,20,19,.84);
-      --panel-strong:rgba(31,24,23,.92);
-      --text:#fff5ee;
-      --muted:#ead8cc;
-      --line:rgba(255,255,255,.10);
-      --accent:#de8368;
-      --accent-2:#f0a587;
-      --shadow:0 18px 55px rgba(0,0,0,.30);
-      --header-bg:rgba(18,14,13,.88);
+      --header-bg:rgba(247,240,232,.90);
     }
 
     *{box-sizing:border-box}
@@ -72,7 +58,6 @@
       background-position:center top;
       background-attachment:fixed;
       overflow-x:hidden;
-      transition:background-color .3s ease,color .3s ease;
     }
 
     a{text-decoration:none;color:inherit}
@@ -119,9 +104,12 @@
       flex:0 0 auto;
     }
 
+    .brand-text{
+      min-width:0;
+    }
+
     .brand-text strong{
       display:block;
-      font-size:1rem;
       line-height:1.1;
       letter-spacing:.01em;
     }
@@ -129,7 +117,7 @@
     .brand-text span{
       display:block;
       color:var(--muted);
-      font-size:.88rem;
+      font-size:.84rem;
       margin-top:4px;
       white-space:nowrap;
       overflow:hidden;
@@ -137,23 +125,14 @@
     }
 
     .brand-script{
-      font-family:"Modernline","Cormorant Garamond",serif;
-      font-weight:400;
-      letter-spacing:.01em;
       display:inline-block;
-      background:linear-gradient(90deg,#a44a37 0%, #d67a62 28%, #d8af6c 52%, #cb6f83 76%, #8f4dc2 100%);
-      background-size:200% 100%;
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-      animation:brandPulse 6s ease-in-out infinite;
-      filter:drop-shadow(0 0 8px rgba(214,122,98,.18));
-    }
-
-    body.dark .brand-script{
-      background:linear-gradient(90deg,#ffb09a 0%, #ffd1b5 28%, #ffe09d 52%, #ffb1c8 76%, #d3b1ff 100%);
-      background-size:200% 100%;
-      filter:drop-shadow(0 0 10px rgba(255,190,170,.22));
+      font-family:"BabyAletha","Cormorant Garamond",serif;
+      font-size:clamp(1.7rem, 2.8vw, 2.35rem);
+      line-height:1.15;
+      color:var(--accent-2);
+      font-weight:400;
+      padding-bottom:.1em;
+      white-space:nowrap;
     }
 
     .nav-links{
@@ -164,7 +143,6 @@
       justify-content:flex-end;
     }
 
-    .toggle-btn,
     .ghost-btn,
     .primary-btn{
       border:none;
@@ -179,18 +157,8 @@
       transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
 
-    .toggle-btn{
-      width:46px;
-      padding:0;
-      background:var(--panel);
-      color:var(--text);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      flex:0 0 auto;
-    }
-
     .ghost-btn{
-      background:rgba(255,255,255,.18);
+      background:rgba(255,255,255,.20);
       color:var(--text);
       border:1px solid var(--line);
       backdrop-filter:blur(10px);
@@ -203,9 +171,9 @@
       box-shadow:0 14px 30px rgba(123,40,29,.22);
     }
 
-    .toggle-btn:hover,
     .ghost-btn:hover,
-    .primary-btn:hover{
+    .primary-btn:hover,
+    .mobile-menu-btn:hover{
       transform:translateY(-2px);
     }
 
@@ -735,35 +703,9 @@
       backdrop-filter:blur(10px);
     }
 
-    body.dark .section-head h2,
-    body.dark .section-head p,
-    body.dark .brand-text span,
-    body.dark .footer-inner,
-    body.dark .footer-inner span{
-      color:#f7e8dd;
-      text-shadow:0 2px 12px rgba(0,0,0,.34);
-    }
-
-    body.dark .ghost-btn{
-      background:rgba(255,255,255,.08);
-      color:#fff4ed;
-      border-color:rgba(255,255,255,.12);
-    }
-
-    body.dark .mobile-menu-btn,
-    body.dark .toggle-btn{
-      color:#fff4ed;
-    }
-
     @keyframes fadeUp{
       from{opacity:0;transform:translateY(16px)}
       to{opacity:1;transform:translateY(0)}
-    }
-
-    @keyframes brandPulse{
-      0%{background-position:0% 50%; transform:translateY(0)}
-      50%{background-position:100% 50%; transform:translateY(-1px)}
-      100%{background-position:0% 50%; transform:translateY(0)}
     }
 
     @media (max-width: 1080px){
@@ -818,7 +760,7 @@
       }
 
       .mobile-drawer.open{
-        max-height:320px;
+        max-height:280px;
       }
 
       .mobile-drawer-inner{
@@ -869,6 +811,10 @@
       .footer-inner{
         align-items:flex-start;
       }
+
+      .brand-script{
+        font-size:1.55rem;
+      }
     }
   </style>
 </head>
@@ -880,27 +826,25 @@
           <img class="brand-logo" src="https://iili.io/qXFW4TP.jpg" alt="Logo Atelier de Castillo" />
           <div class="brand-text">
             <strong><span class="brand-script">Atelier de Castillo</span></strong>
-            <span>Taller de tufting · Palermo Hollywood</span>
+            <span>Taller de tufting</span>
           </div>
         </a>
 
         <div class="nav-links">
           <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
-          <a class="ghost-btn" href="#galeria">Galería</a>
+          <a class="ghost-btn" href="#galeria">Galeria</a>
           <a class="ghost-btn" href="#reseñas">Reseñas</a>
-          <button class="toggle-btn" id="themeToggle" aria-label="Cambiar tema">◐</button>
           <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">☰</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
       </div>
 
       <div class="mobile-drawer" id="mobileDrawer">
         <div class="mobile-drawer-inner">
           <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
-          <a class="ghost-btn" href="#galeria">Galería</a>
+          <a class="ghost-btn" href="#galeria">Galeria</a>
           <a class="ghost-btn" href="#reseñas">Reseñas</a>
-          <button class="toggle-btn" id="themeToggleMobile" aria-label="Cambiar tema">◐</button>
           <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
@@ -912,7 +856,7 @@
       <div class="container">
         <div class="hero-layout">
           <div class="hero-copy">
-            <span class="eyebrow"><span class="brand-script">Atelier de Castillo</span></span>
+            <span class="eyebrow">Atelier de Castillo</span>
             <h1>Una marca donde la textura y el color construyen identidad.</h1>
             <p>
               Atelier de Castillo propone una mirada sensible y creativa sobre el tufting. No se trata solo de una pieza terminada, sino de todo lo que pasa en el recorrido: la idea, la elección de formas, el juego con los colores y la transformación de una imagen en algo real, con presencia propia.
@@ -922,7 +866,7 @@
             </p>
             <div class="hero-actions">
               <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
-              <a class="ghost-btn" href="#galeria">Explorar galería</a>
+              <a class="ghost-btn" href="#galeria">Explorar galeria</a>
             </div>
           </div>
 
@@ -959,7 +903,7 @@
           <div class="info-stack">
             <div class="panel info-card">
               <strong>Ubicación</strong>
-              <p>Palermo Hollywood, CABA. Un entorno creativo donde el proceso y la identidad visual tienen protagonismo.</p>
+              <p>Un entorno creativo donde el proceso y la identidad visual tienen protagonismo.</p>
             </div>
             <div class="panel info-card">
               <strong>Esencia</strong>
@@ -1086,7 +1030,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Galería</h2>
+            <h2>Galeria</h2>
           </div>
           <p>
             Una selección de imágenes que muestra no solo el resultado, sino también el clima visual, la textura y el proceso que hacen reconocible a Atelier de Castillo.
@@ -1182,16 +1126,16 @@
               <p>Una mezcla entre arte textil, sensibilidad visual, trabajo manual y una búsqueda clara por crear piezas con identidad propia.</p>
             </div>
             <div class="faq-item">
-              <strong>¿Dónde está ubicado?</strong>
-              <p>En Palermo Hollywood, CABA, dentro de un entorno creativo que acompaña la experiencia y el universo de la marca.</p>
-            </div>
-            <div class="faq-item">
-              <strong>¿Por qué se siente diferente a otras propuestas?</strong>
-              <p>Porque no pone el foco solo en el resultado final, sino también en el proceso, en el detalle y en la construcción de una identidad visual fuerte.</p>
-            </div>
-            <div class="faq-item">
-              <strong>¿Qué valor tiene el proceso creativo en la marca?</strong>
+              <strong>¿Qué valor tiene el proceso creativo?</strong>
               <p>Es central. La idea, la textura, el color y el tiempo de trabajo forman parte de lo que vuelve especial a cada pieza.</p>
+            </div>
+            <div class="faq-item">
+              <strong>¿Qué hace diferente a la marca?</strong>
+              <p>Que no pone el foco solo en el resultado final, sino también en el detalle, en el proceso y en una identidad visual fuerte.</p>
+            </div>
+            <div class="faq-item">
+              <strong>¿Qué tipo de piezas transmite la galería?</strong>
+              <p>Trabajos con presencia, carácter y una estética que mezcla sensibilidad artística con oficio real.</p>
             </div>
           </div>
         </div>
@@ -1219,7 +1163,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <span>Atelier de Castillo · Taller de Tufting · Palermo Hollywood, CABA</span>
+        <span>Atelier de Castillo · Taller de tufting</span>
         <span>Creado y diseñado por <a class="footer-brand" href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Ciborg 347</a></span>
       </div>
     </div>
@@ -1340,24 +1284,6 @@
     }
 
     renderGalleryBatch();
-
-    const body = document.body;
-    const themeToggle = document.getElementById("themeToggle");
-    const themeToggleMobile = document.getElementById("themeToggleMobile");
-
-    function applySavedTheme() {
-      const savedTheme = localStorage.getItem("atelier-theme");
-      if (savedTheme === "dark") body.classList.add("dark");
-    }
-
-    function toggleTheme() {
-      body.classList.toggle("dark");
-      localStorage.setItem("atelier-theme", body.classList.contains("dark") ? "dark" : "light");
-    }
-
-    if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
-    if (themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
-    applySavedTheme();
 
     const mobileMenuBtn = document.getElementById("mobileMenuBtn");
     const mobileDrawer = document.getElementById("mobileDrawer");
