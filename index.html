@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atelier de Castillo | Taller de Tufting</title>
-  <meta name="description" content="Atelier de Castillo es un espacio creativo de tufting. Textura, color, piezas con identidad y una experiencia artística para descubrir el valor de crear con las manos." />
+  <meta name="description" content="Atelier de Castillo es un espacio creativo de tufting. Textura, color, piezas con identidad y una experiencia artística para descubrir una nueva forma de crear alfombras artesanales." />
   <meta name="keywords" content="tufting, atelier de castillo, alfombras, taller de tufting, arte textil, experiencia creativa" />
   <meta name="author" content="Ciborg 347" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Atelier de Castillo | Taller de Tufting" />
-  <meta property="og:description" content="Un espacio creativo donde el tufting, la textura y el color se convierten en piezas con identidad propia." />
+  <meta property="og:description" content="Tufting: la nueva era de las alfombras artesanales. Textura, color y piezas con identidad propia." />
   <meta property="og:image" content="https://iili.io/qXFjeGn.jpg" />
   <meta property="og:url" content="https://atelierdecastillo.com" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Atelier de Castillo | Taller de Tufting" />
-  <meta name="twitter:description" content="Textura, color, proceso creativo y piezas únicas en un taller con identidad propia." />
+  <meta name="twitter:description" content="Tufting: la nueva era de las alfombras artesanales. Textura, color y piezas con identidad propia." />
   <meta name="twitter:image" content="https://iili.io/qXFjeGn.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -249,22 +249,31 @@
     .hero-copy h1{
       margin:0;
       font-family:"Cormorant Garamond", serif;
-      font-size:clamp(2.8rem, 6vw, 5rem);
-      line-height:.94;
+      font-size:clamp(3rem, 6vw, 5.2rem);
+      line-height:.90;
       letter-spacing:-.04em;
-      max-width:640px;
+      max-width:700px;
     }
 
-    .hero-copy p{
+    .hero-copy .hero-sub{
       margin:16px 0 0;
+      color:var(--text);
+      font-size:1.14rem;
+      line-height:1.6;
+      max-width:580px;
+      font-weight:600;
+    }
+
+    .hero-copy .hero-text{
+      margin:14px 0 0;
       color:var(--muted);
-      line-height:1.85;
+      line-height:1.8;
       font-size:1rem;
-      max-width:620px;
+      max-width:560px;
     }
 
     .hero-actions{
-      margin-top:26px;
+      margin-top:24px;
       display:flex;
       flex-wrap:wrap;
       gap:12px;
@@ -319,6 +328,7 @@
       font-size:1rem;
     }
 
+    .what-grid,
     .intro-grid{
       display:grid;
       grid-template-columns:1.05fr .95fr;
@@ -331,7 +341,8 @@
     .faq-box,
     .review-card,
     .step-card,
-    .cta-wrap{
+    .cta-wrap,
+    .what-card{
       padding:28px;
       align-self:start;
       height:auto;
@@ -342,11 +353,37 @@
     .faq-box p,
     .review-card p,
     .step-card p,
-    .cta-wrap p{
+    .cta-wrap p,
+    .what-card p{
       margin:0;
       color:var(--muted);
       line-height:1.8;
       font-size:.98rem;
+    }
+
+    .what-mini{
+      display:grid;
+      gap:14px;
+    }
+
+    .what-pill{
+      padding:18px 20px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:var(--panel-strong);
+    }
+
+    .what-pill strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:6px;
+    }
+
+    .what-pill span{
+      display:block;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:.95rem;
     }
 
     .info-stack{
@@ -710,6 +747,7 @@
 
     @media (max-width: 1080px){
       .hero-layout,
+      .what-grid,
       .intro-grid,
       .services-grid,
       .cta-wrap{
@@ -781,7 +819,8 @@
       .faq-box,
       .review-card,
       .step-card,
-      .cta-wrap{
+      .cta-wrap,
+      .what-card{
         padding:22px;
       }
 
@@ -815,6 +854,10 @@
       .brand-script{
         font-size:1.55rem;
       }
+
+      .hero-copy .hero-sub{
+        font-size:1rem;
+      }
     }
   </style>
 </head>
@@ -831,6 +874,7 @@
         </a>
 
         <div class="nav-links">
+          <a class="ghost-btn" href="#que-es">Que es</a>
           <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
           <a class="ghost-btn" href="#galeria">Galeria</a>
           <a class="ghost-btn" href="#reseñas">Reseñas</a>
@@ -842,6 +886,7 @@
 
       <div class="mobile-drawer" id="mobileDrawer">
         <div class="mobile-drawer-inner">
+          <a class="ghost-btn" href="#que-es">Que es</a>
           <a class="ghost-btn" href="#quienes-somos">Quienes somos</a>
           <a class="ghost-btn" href="#galeria">Galeria</a>
           <a class="ghost-btn" href="#reseñas">Reseñas</a>
@@ -857,22 +902,61 @@
         <div class="hero-layout">
           <div class="hero-copy">
             <span class="eyebrow">Atelier de Castillo</span>
-            <h1>Una marca donde la textura y el color construyen identidad.</h1>
-            <p>
-              Atelier de Castillo propone una mirada sensible y creativa sobre el tufting. No se trata solo de una pieza terminada, sino de todo lo que pasa en el recorrido: la idea, la elección de formas, el juego con los colores y la transformación de una imagen en algo real, con presencia propia.
+            <h1>Tufting: la nueva era de las alfombras artesanales</h1>
+            <p class="hero-sub">
+              Diseño, textura y color para crear piezas con identidad propia.
             </p>
-            <p>
-              El atelier transmite una estética cálida, artística y actual, donde cada trabajo conserva ese equilibrio entre oficio, experimentación y personalidad. Un espacio pensado para quienes valoran el proceso tanto como el resultado.
+            <p class="hero-text">
+              Una propuesta artística donde el proceso creativo también forma parte de la obra.
             </p>
             <div class="hero-actions">
               <a class="primary-btn" href="https://www.instagram.com/atelierdecastillo/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
-              <a class="ghost-btn" href="#galeria">Explorar galeria</a>
+              <a class="ghost-btn" href="#que-es">Descubrir mas</a>
             </div>
           </div>
 
           <div class="hero-media-wrap">
             <div class="hero-media">
               <img src="https://iili.io/qXFjeGn.jpg" alt="Imagen principal Atelier de Castillo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-es">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>¿Qué es el tufting?</h2>
+          </div>
+          <p>
+            Una técnica textil contemporánea que permite crear alfombras artesanales a través de textura, color y composición.
+          </p>
+        </div>
+
+        <div class="what-grid">
+          <div class="panel what-card">
+            <p>
+              El tufting es una forma de construir alfombras y piezas textiles con relieve, presencia y mucha libertad creativa. Permite trabajar formas, contrastes y colores de una manera más dinámica, dando lugar a composiciones únicas y con mucha identidad visual.
+            </p>
+            <p style="margin-top:16px;">
+              En Atelier de Castillo esta técnica se convierte en lenguaje propio: una manera de unir arte textil, sensibilidad estética y trabajo manual para crear piezas que no solo decoran, sino que transmiten carácter.
+            </p>
+          </div>
+
+          <div class="what-mini">
+            <div class="what-pill">
+              <strong>Textura</strong>
+              <span>Superficies, relieve y materia que le dan profundidad a cada pieza.</span>
+            </div>
+            <div class="what-pill">
+              <strong>Color</strong>
+              <span>Combinaciones pensadas para generar contraste, armonía y personalidad.</span>
+            </div>
+            <div class="what-pill">
+              <strong>Identidad</strong>
+              <span>Una técnica actual para crear alfombras artesanales con una impronta propia.</span>
             </div>
           </div>
         </div>
@@ -1122,8 +1206,8 @@
         <div class="panel faq-box">
           <div class="faq-list">
             <div class="faq-item">
-              <strong>¿Qué transmite Atelier de Castillo?</strong>
-              <p>Una mezcla entre arte textil, sensibilidad visual, trabajo manual y una búsqueda clara por crear piezas con identidad propia.</p>
+              <strong>¿Qué es el tufting?</strong>
+              <p>Es una técnica textil contemporánea que permite crear alfombras artesanales a través de textura, color y composición.</p>
             </div>
             <div class="faq-item">
               <strong>¿Qué valor tiene el proceso creativo?</strong>
